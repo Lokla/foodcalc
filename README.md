@@ -1,59 +1,20 @@
 # Foodcalc
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+I recently did an Angular course on Udemy and wanted to play around with something in my free time.
+So this is the outcome of a Sunday afternoon, with heavy GitHub Copilot usage.
 
-## Development server
+## What does it to and who will want to use it?
 
-To start a local development server, run:
+This Angular app will help you in finding the correct broker prices if you are playing EQ2 on Origins server and you got a Provisioner. It will also show the fuel and raw cost you need to consider.
 
-```bash
-ng serve
-```
+Currently only T7 recipies have been added, feel free to create a Pullrequest with lower level recipies. The system should be able to handle them as well. I am not sure if I will add it myself.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Please note: The prices you enter and all other things you add here, will be stored locally inside your browser. So everything you do with this app is your own risk / effort. I also do not take any responsibility and will not be able to support (a lot). Feel free to poke me though if you got feature proposals or something else on your mind.
 
-## Code scaffolding
+# So how can I use it?
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Out of the box, all recipies added will show you the fuel prices directly. But there is more: You can also add the current raw prices on the broker to the calculator which in turn will then also take those in consideration.
 
-```bash
-ng generate component component-name
-```
+And there is one more feature: You can also add the current broker price for reference the items (the highest items with the longest duration for each food/drink type in each Tier). This price will then be computed into a cost/min factor, which then can be seen inside the recipie lists. This way you are able to price lower level items in a way, that people do not have any incentive to buy the longer lasting stuff. You will also be notified about the expected revenue or loss if you sell at that price. So in case something is sold below your production cost, you will see that this is a bad deal for you.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The app also provide the possibility to use click-to-copy, so if e.g. if you are inside the raw materials tab, you can just click the raw name to copy it to your clipboard. Also you can click most prices and copy the value in copper, which then in turn can be pasted into the broker window. Just press the copper button afterwards and the price will unfold itself.
