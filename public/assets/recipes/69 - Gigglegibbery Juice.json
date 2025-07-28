@@ -1,0 +1,12 @@
+{
+  "name": "Gigglegibbery Juice",
+  "level": 69,
+  "duration": 364,
+  "stats": "WIS / STA",
+  "type": "Drink",
+  "ingredients": [
+    ["Squash", 3],
+    ["Xegonberry", 3]
+  ],
+  "fuel": 10
+}

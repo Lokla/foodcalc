@@ -1,0 +1,115 @@
+<div class="recipes-list-container">
+  <h2>Recipes Table - Tier {{ getCurrentTier() }}</h2>
+  
+  <!-- Filters Section -->
+  <div class="filters-section">
+    <h3>Filters</h3>
+    <div class="filter-row">
+      <div class="filter-group">
+        <label for="typeFilter">Type:</label>
+        <select id="typeFilter" [ngModel]="selectedType()" (ngModelChange)="selectedType.set($event)">
+          <option value="">All Types</option>
+          <option value="Food">Food</option>
+          <option value="Drink">Drink</option>
+        </select>
+      </div>
+      
+      <div class="filter-group">
+        <label for="statsFilter">Stats:</label>
+        <select id="statsFilter" [ngModel]="selectedStats()" (ngModelChange)="selectedStats.set($event)">
+          <option value="">All Stats</option>
+          @for (stat of availableStats(); track stat) {
+            <option [value]="stat">{{ stat }}</option>
+          }
+        </select>
+      </div>
+      
+      <div class="filter-group">
+        <label>
+          <input type="checkbox" [ngModel]="hideNoStats()" (ngModelChange)="hideNoStats.set($event)">
+          Hide recipes with no stats
+        </label>
+      </div>
+      
+      <div class="filter-group">
+        <label>
+          <input type="checkbox" [ngModel]="showOnlyAvailable()" (ngModelChange)="showOnlyAvailable.set($event)">
+          Show only recipes I can make
+        </label>
+      </div>
+      
+      <div class="filter-group">
+        <label for="sortByFilter">Sort by:</label>
+        <select id="sortByFilter" [ngModel]="sortByOption()" (ngModelChange)="sortByOption.set($event)">
+          <option value="level">Level (High-Low)</option>
+          <option value="name">Name (A-Z)</option>
+          <option value="revenue">Revenue (High-Low)</option>
+          <option value="costPerMinute">Cost per Minute (Low-High)</option>
+        </select>
+      </div>
+      
+      <div class="filter-group">
+        <button class="clear-filters-btn" (click)="clearFilters()">Clear Filters</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="table-container">
+    <table class="recipes-table">
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Stats</th>
+          <th>Cost / Item</th>
+          <th>Fuel / Stack</th>
+          <th>Cost / Stack</th>
+          <th>Broker Price</th>
+          <th>Broker Revenue</th>
+          <th>Recommended Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (recipe of sortedRecipes(); track recipe.name) {
+          <tr>
+            <td class="level-cell">{{ recipe.level }}</td>
+            <td class="name-cell clickable-name" [class.copy-success]="isCopySuccess('name', recipe)" (click)="copyRecipeName(recipe)">{{ recipe.name }}</td>
+            <td class="type-cell" [class.food]="recipe.type === 'Food'" [class.drink]="recipe.type === 'Drink'">
+              {{ recipe.type }}
+            </td>
+            <td class="stats-cell">{{ recipe.stats }}</td>
+            <td class="cost-cell">
+              <app-currency-display [value]="getCostPerItem(recipe)"></app-currency-display>
+            </td>
+            <td class="fuel-stack-cell">
+              <app-currency-display [value]="getFuelCostPerStack(recipe)"></app-currency-display>
+            </td>
+            <td class="cost-stack-cell">
+              <app-currency-display [value]="getCostPerStack(recipe)"></app-currency-display>
+            </td>
+            <td class="broker-price-cell clickable-price" [class.copy-success]="isCopySuccess('broker', recipe)" (click)="copyBrokerPrice(recipe)">
+              <app-currency-display [value]="getBrokerPrice(recipe)"></app-currency-display>
+            </td>
+            <td class="broker-revenue-cell" [class.loss-section]="getBrokerRevenue(recipe) < 0">
+              <app-currency-display [value]="getAbsBrokerRevenue(recipe)"></app-currency-display>
+            </td>
+            <td class="recommended-price-cell clickable-price" [class.copy-success]="isCopySuccess('recommended', recipe)" (click)="copyRecommendedPrice(recipe)">
+              <app-currency-display [value]="getRecommendedBrokerPrice(recipe)"></app-currency-display>
+            </td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="10" class="no-recipes">
+              No recipes found for current tier.
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="table-info">
+    <p><strong>Stack:</strong> 20 items | <strong>Showing:</strong> {{ sortedRecipes().length }} recipes</p>
+  </div>
+</div>

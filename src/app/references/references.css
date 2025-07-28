@@ -1,0 +1,256 @@
+.references-container {
+  padding: 20px;
+  color: white;
+  background-color: black;
+  min-height: 100vh;
+}
+
+.references-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.references-header h2 {
+  color: burlywood;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.references-header p {
+  color: #ccc;
+  font-style: italic;
+}
+
+.references-summary {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: 1px solid #333;
+}
+
+.summary-info, .summary-value {
+  color: white;
+}
+
+.clear-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clear-btn:hover {
+  background: #c82333;
+}
+
+.references-form {
+  width: 100%;
+}
+
+.references-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.reference-item-card {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #333;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reference-item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.item-name {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.clickable-name {
+  cursor: pointer;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.clickable-name:hover {
+  color: burlywood;
+}
+
+.copy-success-icon {
+  color: #28a745;
+  font-weight: bold;
+  margin-left: 8px;
+  font-size: 16px;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: scale(0.8); }
+  10% { opacity: 1; transform: scale(1.1); }
+  40% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+.item-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.level-badge {
+  background: #6c757d;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.type-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+}
+
+.type-badge.food {
+  background: #90EE90;
+  color: black;
+}
+
+.type-badge.drink {
+  background: #87CEEB;
+  color: black;
+}
+
+.item-stats {
+  color: #FFD700;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.item-cost-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item-cost-input label {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.price-input {
+  padding: 8px 12px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #2a2a2a;
+  color: white;
+  font-size: 14px;
+}
+
+.price-input:focus {
+  outline: none;
+  border-color: burlywood;
+  box-shadow: 0 0 0 2px rgba(222, 184, 135, 0.25);
+}
+
+.current-value {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.broker-cost-per-minute {
+  font-size: 11px;
+  color: #FFD700;
+  margin-top: 5px;
+  padding: 3px 8px;
+  background-color: rgba(255, 215, 0, 0.1);
+  border-radius: 3px;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.save-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.save-btn:hover {
+  background: #218838;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #ccc;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.empty-state h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .references-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .references-summary {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  
+  .item-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .item-badges {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+}

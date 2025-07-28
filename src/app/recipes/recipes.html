@@ -1,0 +1,162 @@
+<div class="recipes-container">
+  <h2>EverQuest 2 Recipes</h2>
+  
+  @if (copyFeedback()) {
+    <div class="copy-feedback">
+      {{ copyFeedback() }}
+    </div>
+  }
+  
+  <!-- Filters Section -->
+  <div class="filters-section">
+    <h3>Showing Recipes for Current Tier: {{ getCurrentTier() }}</h3>
+    
+    <div class="filter-row">
+      <div class="filter-group">
+        <label for="type-filter">Type:</label>
+        <select id="type-filter" [(ngModel)]="selectedType">
+          <option [ngValue]="null">All Types</option>
+          <option value="Food">Food</option>
+          <option value="Drink">Drink</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="stats-filter">Stats:</label>
+        <select id="stats-filter" [(ngModel)]="selectedStats">
+          <option value="">All Stats</option>
+          @for (stat of getUniqueStats(); track stat) {
+            <option [value]="stat">{{ stat }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="sort-filter">Sort by:</label>
+        <select id="sort-filter" [(ngModel)]="sortBy">
+          <option value="name">Name (A-Z)</option>
+          <option value="level">Level (High-Low)</option>
+          <option value="revenue">Revenue (High-Low)</option>
+        </select>
+      </div>
+      
+      <div class="filter-group checkbox-group">
+        <label>
+          <input type="checkbox" [(ngModel)]="showOnlyAvailable">
+          Show only recipes I can make
+        </label>
+      </div>
+      
+      <div class="filter-group checkbox-group">
+        <label>
+          <input type="checkbox" [(ngModel)]="hideNoStatItems">
+          Hide items with no stats
+        </label>
+      </div>
+      
+      <button (click)="resetFilters()" class="reset-btn">Reset Filters</button>
+    </div>
+  </div>
+  
+  <!-- Recipe Cards -->
+  <div class="recipes-grid">
+    @for (recipe of filteredRecipes(); track recipe.name) {
+      <div class="recipe-card" [class.unavailable]="!canMakeRecipe(recipe)">
+        <div class="recipe-header">
+          <h3>{{ recipe.name }}</h3>
+          <div class="recipe-meta">
+            <span class="level">Level {{ recipe.level }}</span>
+            <span class="tier">Tier {{ getTierFromLevel(recipe.level) }}</span>
+            <span class="type" [class.food]="recipe.type === 'Food'" [class.drink]="recipe.type === 'Drink'">
+              {{ recipe.type }}
+            </span>
+          </div>
+        </div>
+        
+        <div class="recipe-details">
+          <div class="ingredients">
+            <strong>Ingredients:</strong>
+            <ul>
+              @for (ingredient of recipe.ingredients; track ingredient[0]) {
+                <li>
+                  {{ ingredient[1] }}x {{ ingredient[0] }}
+                  <span class="ingredient-cost">
+                    <app-currency-display [value]="getIngredientCost(ingredient[0], ingredient[1])"></app-currency-display>
+                  </span>
+                </li>
+              }
+            </ul>
+          </div>
+          
+          @if (recipe.fuel > 0) {
+            <div class="fuel">
+              <strong>Fuel Required:</strong> {{ recipe.fuel }}
+              <span class="fuel-cost cost-value right-align">
+                <app-currency-display [value]="getFuelCost(recipe)"></app-currency-display>
+              </span>
+            </div>
+          }
+          
+          <div class="cost-section">
+            <div class="cost-section-header">
+              <strong>Per Item</strong>
+            </div>
+            <div class="cost">
+              <strong>Production Cost:</strong> 
+              <span class="cost-value clickable-price right-align" (click)="copyRecipeCost(recipe)">
+                <app-currency-display [value]="getRecipeCost(recipe)"></app-currency-display>
+              </span>
+            </div>
+            <div class="cost-per-minute">
+              <strong>Cost per Minute:</strong> 
+              <span class="cost-value right-align">
+                <app-currency-display [value]="getRecipeCostPerMinute(recipe)"></app-currency-display>
+              </span>
+            </div>
+            <div class="broker-price" [class.loss-section]="getBrokerRevenue(recipe) < 0">
+              <div>
+                <strong>Broker Price:</strong> 
+                <span class="cost-value broker-value clickable-price right-align" (click)="copyBrokerPrice(recipe)">
+                  <app-currency-display [value]="getBrokerPrice(recipe)"></app-currency-display>
+                </span>
+              </div>
+              <div>
+                <strong>{{ getBrokerRevenue(recipe) >= 0 ? 'Revenue:' : 'Loss:' }}</strong> 
+                <span class="cost-value broker-value right-align">
+                  <app-currency-display [value]="getAbsBrokerRevenue(recipe)"></app-currency-display>
+                </span>
+              </div>
+            </div>
+            <div class="recommended-price">
+              <div>
+                <strong>Recommended Price:</strong> 
+                <span class="cost-value recommended-value clickable-price right-align" (click)="copyRecommendedPrice(recipe)">
+                  <app-currency-display [value]="getRecommendedBrokerPrice(recipe)"></app-currency-display>
+                </span>
+              </div>
+              <div>
+                <strong>{{ getRecommendedRevenue(recipe) >= 0 ? 'Revenue:' : 'Loss:' }}</strong> 
+                <span class="cost-value recommended-value right-align" [class.loss-value]="getRecommendedRevenue(recipe) < 0">
+                  <app-currency-display [value]="getAbsRecommendedRevenue(recipe)"></app-currency-display>
+                </span>
+              </div>
+            </div>
+            <div class="duration-info">
+              <strong>Duration:</strong> {{ formatDuration(recipe.duration) }}
+            </div>
+          </div>
+          
+          @if (!canMakeRecipe(recipe)) {
+            <div class="unavailable-notice">
+              ⚠️ Some ingredients not available in current tier
+            </div>
+          }
+        </div>
+      </div>
+    } @empty {
+      <div class="no-recipes">
+        <p>No recipes found matching your filters.</p>
+      </div>
+    }
+  </div>
+</div>

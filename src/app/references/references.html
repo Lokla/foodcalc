@@ -1,0 +1,74 @@
+<div class="references-container">
+  <div class="references-header">
+    <h2>Reference Items - Tier {{ selectedTier() }}</h2>
+    <p>Set current broker prices for the highest-level recipes of each stat/type combination in this tier.</p>
+  </div>
+
+  <div class="references-summary">
+    <div class="summary-info">
+      <strong>Total Reference Items:</strong> {{ referenceItems().length }}
+    </div>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="references-form">
+    <div class="references-grid">
+      @for (item of referenceItems(); track item.name) {
+        <div class="reference-item-card">
+          <div class="item-header">
+            <h3 class="item-name clickable-name" 
+                (click)="copyToClipboard(item.name)"
+                [title]="'Click to copy: ' + item.name">
+              {{ item.name }}
+              @if (copiedItem() === item.name) {
+                <span class="copy-success-icon">✓</span>
+              }
+            </h3>
+            <div class="item-badges">
+              <span class="level-badge">Level {{ item.level }}</span>
+              <span class="type-badge" [class.food]="item.type === 'Food'" [class.drink]="item.type === 'Drink'">
+                {{ item.type }}
+              </span>
+            </div>
+          </div>
+          
+          <div class="item-stats">
+            <strong>Stats:</strong> {{ item.stats }}
+          </div>
+          
+          <div class="item-cost-input">
+            <label [for]="getControlName(item)">Current Broker Price (in silver):</label>
+            <input
+              type="number"
+              [id]="getControlName(item)"
+              [formControlName]="getControlName(item)"
+              placeholder="Enter current broker price"
+              min="0"
+              step="1"
+              class="price-input"
+            />
+            <div class="current-value">
+              <app-currency-display [value]="form.get(getControlName(item))?.value || 0"></app-currency-display>
+            </div>
+            <div class="broker-cost-per-minute">
+              <strong>Broker Cost per Minute:</strong>
+              <app-currency-display [value]="getBrokerCostPerMinute(item)"></app-currency-display>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    @if (referenceItems().length === 0) {
+      <div class="empty-state">
+        <h3>No Reference Items Found</h3>
+        <p>No recipes with stats found for Tier {{ selectedTier() }}. Switch to a different tier or add more recipes.</p>
+      </div>
+    }
+
+    @if (referenceItems().length > 0) {
+      <div class="form-actions">
+        <button type="submit" class="save-btn">Save Broker Prices</button>
+      </div>
+    }
+  </form>
+</div>

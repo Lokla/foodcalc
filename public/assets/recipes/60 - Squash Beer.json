@@ -1,0 +1,12 @@
+{
+    "name": "Squash Beer",
+    "level": 60,
+    "duration": 48,
+    "stats": "None",
+    "type": "Drink",
+    "ingredients": [
+        ["Fluid", 1],
+        ["Squash", 1]
+    ],
+    "fuel": 1
+}

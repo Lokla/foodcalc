@@ -1,0 +1,12 @@
+{
+    "name": "Ravasect Sandwich",
+    "level": 60,
+    "duration": 48,
+    "stats": "None",
+    "type": "Food",
+    "ingredients": [
+        ["Dough", 1],
+        ["Ravasect Meat", 1]
+    ],
+    "fuel": 1
+}

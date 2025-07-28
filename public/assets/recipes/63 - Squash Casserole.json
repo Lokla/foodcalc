@@ -1,0 +1,11 @@
+{
+  "name": "Squash Casserole",
+  "level": 63,
+  "duration": 162,
+  "stats": "None",
+  "type": "Food",
+  "ingredients": [
+    ["Squash", 3]
+  ],
+  "fuel": 4
+}

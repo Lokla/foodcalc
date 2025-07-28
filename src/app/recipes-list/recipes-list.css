@@ -1,0 +1,309 @@
+.recipes-list-container {
+  padding: 20px;
+  color: white;
+  background-color: black;
+  min-height: 100vh;
+}
+
+.recipes-list-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: burlywood;
+  font-size: 2rem;
+}
+
+/* Filters Section */
+.filters-section {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #333;
+}
+
+.filters-section h3 {
+  color: burlywood;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter-group label {
+  font-weight: bold;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.filter-group select {
+  padding: 8px 12px;
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  min-width: 120px;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: burlywood;
+}
+
+.filter-group label input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.1);
+}
+
+.filter-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.clear-filters-btn {
+  padding: 8px 16px;
+  background-color: #444;
+  color: white;
+  border: 1px solid #666;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.clear-filters-btn:hover {
+  background-color: #555;
+}
+
+.table-container {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  overflow-x: auto;
+  border: 1px solid #333;
+}
+
+.recipes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.recipes-table th {
+  background-color: #2a2a2a;
+  color: burlywood;
+  padding: 12px 8px;
+  text-align: left;
+  border: 1px solid #444;
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.recipes-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.recipes-table th.sortable:hover {
+  background-color: #3a3a3a;
+}
+
+.recipes-table td {
+  padding: 10px 8px;
+  border: 1px solid #333;
+  background-color: #222;
+  font-size: 0.85rem;
+}
+
+.recipes-table tbody tr:nth-child(even) td {
+  background-color: #252525;
+}
+
+.recipes-table tbody tr:hover td {
+  background-color: #333;
+}
+
+/* Column-specific styling */
+.level-cell {
+  text-align: center;
+  font-weight: bold;
+  color: #ccc;
+  width: 60px;
+}
+
+.name-cell {
+  font-weight: bold;
+  color: white;
+  min-width: 200px;
+}
+
+.type-cell {
+  text-align: center;
+  font-weight: bold;
+  width: 70px;
+}
+
+.type-cell.food {
+  color: #90EE90;
+}
+
+.type-cell.drink {
+  color: #87CEEB;
+}
+
+.stats-cell {
+  text-align: center;
+  color: #FFD700;
+  font-weight: bold;
+  width: 100px;
+  font-size: 0.8rem;
+}
+
+.duration-cell {
+  text-align: center;
+  color: #ccc;
+  width: 80px;
+}
+
+.cost-cell, .fuel-cost-cell, .fuel-stack-cell, .cost-stack-cell, .cost-per-min-cell, .broker-price-cell, .broker-revenue-cell, .recommended-price-cell {
+  text-align: right;
+  width: 80px;
+  padding: 8px 10px;
+  vertical-align: middle;
+}
+
+.broker-price-cell {
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+.recommended-price-cell {
+  background-color: rgba(40, 167, 69, 0.1);
+  font-weight: bold;
+}
+
+.no-recipes {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 40px;
+}
+
+.table-info {
+  margin-top: 15px;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.table-info strong {
+  color: burlywood;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .recipes-table {
+    font-size: 0.8rem;
+  }
+  
+  .recipes-table th,
+  .recipes-table td {
+    padding: 8px 6px;
+  }
+  
+  .name-cell {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    padding: 10px;
+  }
+  
+  .recipes-table {
+    font-size: 0.75rem;
+  }
+  
+  .recipes-table th,
+  .recipes-table td {
+    padding: 6px 4px;
+  }
+  
+  .cost-cell, .fuel-cost-cell, .fuel-stack-cell, .cost-stack-cell, .cost-per-min-cell, .broker-price-cell, .recommended-price-cell {
+    width: 70px;
+    padding: 6px 8px;
+  }
+  
+  .stats-cell {
+    width: 80px;
+    font-size: 0.7rem;
+  }
+  
+  .filter-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-group select {
+    min-width: 100%;
+  }
+}
+
+/* Loss styling for broker revenue cells */
+.broker-revenue-cell.loss-section {
+  background-color: rgba(255, 107, 107, 0.15) !important;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+/* Copy feedback styling - green background on clicked field */
+.copy-success {
+  background-color: rgba(76, 175, 80, 0.3) !important;
+  transition: background-color 0.3s ease;
+  animation: pulseGreen 1s ease-in-out;
+}
+
+@keyframes pulseGreen {
+  0%, 100% { background-color: rgba(76, 175, 80, 0.3); }
+  50% { background-color: rgba(76, 175, 80, 0.5); }
+}
+
+/* Clickable elements styling */
+.clickable-name,
+.clickable-price {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clickable-name:hover {
+  background-color: rgba(218, 165, 32, 0.2);
+  color: burlywood;
+  text-decoration: underline;
+}
+
+.clickable-price:hover {
+  background-color: rgba(218, 165, 32, 0.2);
+  transform: scale(1.05);
+}
+
+.clickable-name:active,
+.clickable-price:active {
+  background-color: rgba(218, 165, 32, 0.4);
+  transform: scale(0.98);
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Bosprite Squash Muffin",
+  "level": 69,
+  "duration": 364,
+  "stats": "STR / STA",
+  "type": "Food",
+  "ingredients": [
+    ["Squash", 3],
+    ["Xegonberry", 2],
+    ["Hanging Root", 1]
+  ],
+  "fuel": 10
+}

@@ -1,0 +1,418 @@
+.recipes-container {
+  padding: 20px;
+  color: white;
+  background-color: black;
+  min-height: 100vh;
+}
+
+.recipes-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: burlywood;
+  font-size: 2rem;
+}
+
+/* Filters Section */
+.filters-section {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #333;
+}
+
+.filters-section h3 {
+  color: burlywood;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter-group label {
+  font-weight: bold;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.filter-group select {
+  padding: 8px 12px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: burlywood;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin: 0;
+}
+
+.reset-btn {
+  padding: 8px 16px;
+  background-color: #444;
+  color: white;
+  border: 1px solid #666;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.reset-btn:hover {
+  background-color: #555;
+}
+
+/* Recipe Grid */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.recipe-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-2px);
+  border-color: burlywood;
+}
+
+.recipe-card.unavailable {
+  opacity: 0.7;
+  border-color: #666;
+}
+
+.recipe-card.unavailable:hover {
+  border-color: #888;
+}
+
+.recipe-header {
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.recipe-header h3 {
+  margin: 0 0 8px 0;
+  color: burlywood;
+  font-size: 1.3rem;
+}
+
+.recipe-meta {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.level {
+  background-color: #2a2a2a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.tier {
+  background-color: #1a4a5a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #87ceeb;
+  font-weight: bold;
+}
+
+.type {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.type.food {
+  background-color: #2d4a2d;
+  color: #90ee90;
+}
+
+.type.drink {
+  background-color: #2d2d4a;
+  color: #87ceeb;
+}
+
+.recipe-details > div {
+  margin-bottom: 12px;
+}
+
+.recipe-details strong {
+  color: #ccc;
+}
+
+.duration, .fuel {
+  font-size: 0.9rem;
+}
+
+.fuel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.ingredients ul {
+  margin: 5px 0 0 20px;
+  padding: 0;
+}
+
+.ingredients li {
+  margin-bottom: 3px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ingredient-cost {
+  color: burlywood;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.fuel-cost {
+  color: burlywood;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.cost-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  margin-top: 15px;
+  font-size: 13px; /* Reduced from default */
+}
+
+.cost-section-header {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 8px;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #444;
+}
+
+.cost, .cost-per-minute, .duration-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cost-value {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.broker-value {
+  color: #FFD700;
+}
+
+.recommended-value {
+  color: #28a745;
+  font-size: 1.2rem;
+}
+
+.broker-price, .recommended-price {
+  padding: 8px;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.broker-price {
+  background-color: rgba(255, 215, 0, 0.1);
+  border-left: 3px solid #FFD700;
+}
+
+.recommended-price {
+  background-color: rgba(40, 167, 69, 0.1);
+  border-left: 3px solid #28a745;
+}
+
+.copy-cost-btn {
+  padding: 8px 12px;
+  background-color: #444;
+  color: white;
+  border: 1px solid #666;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  align-self: flex-end;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.copy-cost-btn:hover {
+  background-color: #555;
+}
+
+.unavailable-notice {
+  background-color: #4a2d2d;
+  color: #ffb3b3;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.no-recipes {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recipes-container {
+    padding: 15px;
+  }
+  
+  .filter-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .recipes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cost-section {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+}
+
+/* Clickable price styling */
+.clickable-price {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.clickable-price:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.broker-value.clickable-price:hover {
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+.recommended-value.clickable-price:hover {
+  background-color: rgba(50, 205, 50, 0.1);
+}
+
+/* Copy feedback styling */
+.copy-feedback {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Right align for currency values */
+.right-align {
+  text-align: right;
+  display: inline-block;
+  min-width: 120px;
+}
+
+.cost-section .cost-value {
+  float: right;
+  text-align: right;
+}
+
+.cost-section .cost,
+.cost-section .cost-per-minute,
+.cost-section .broker-price,
+.cost-section .recommended-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.cost-section .broker-price,
+.cost-section .recommended-price {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.cost-section .broker-price > div,
+.cost-section .recommended-price > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+/* Loss value styling for entire broker price section */
+.cost-section .broker-price.loss-section {
+  background-color: rgba(255, 107, 107, 0.15) !important;
+  border-left: 3px solid #ff6b6b !important;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: 4px;
+}

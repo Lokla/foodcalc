@@ -1,0 +1,12 @@
+{
+  "name": "Sparkling Sweet Iced Chai Tea",
+  "level": 63,
+  "duration": 162,
+  "stats": "None",
+  "type": "Drink",
+  "ingredients": [
+    ["Fluid", 1],
+    ["Sweet Chai Tea Leaf", 3]
+  ],
+  "fuel": 4
+}

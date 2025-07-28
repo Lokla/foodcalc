@@ -1,0 +1,12 @@
+{
+  "name": "Xegonberry Cobbler",
+  "level": 66,
+  "duration": 108,
+  "stats": "AGI / STA",
+  "type": "Food",
+  "ingredients": [
+    ["Xegonberry", 2],
+    ["Hanging Root", 1]
+  ],
+  "fuel": 5
+}
