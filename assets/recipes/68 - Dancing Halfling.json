@@ -1,0 +1,12 @@
+{
+  "name": "Dancing Halfling",
+  "level": 68,
+  "duration": 243,
+  "stats": "INT / STA",
+  "type": "Drink",
+  "ingredients": [
+    ["Squash", 3],
+    ["Xegonberry", 2]
+  ],
+  "fuel": 8
+}

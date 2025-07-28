@@ -1,0 +1,13 @@
+{
+  "name": "Narcoleptic Sweet-Talk",
+  "level": 67,
+  "duration": 162,
+  "stats": "INT / STA",
+  "type": "Drink",
+  "ingredients": [
+    ["Squash", 2],
+    ["Xegonberry", 1],
+    ["Sweet Chai Tea Leaf", 1]
+  ],
+  "fuel": 6
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Bosprite Wine",
+  "level": 69,
+  "duration": 364,
+  "stats": "INT / STA",
+  "type": "Drink",
+  "ingredients": [
+    ["Squash", 2],
+    ["Xegonberry", 4]
+  ],
+  "fuel": 10
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Aviak Sandwich",
+    "level": 60,
+    "duration": 48,
+    "stats": "None",
+    "type": "Food",
+    "ingredients": [
+        ["Dough", 1],
+        ["Aviak Meat", 1]
+    ],
+    "fuel": 1
+}
