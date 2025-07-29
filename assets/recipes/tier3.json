@@ -1,0 +1,18 @@
+{
+  "tier": 3,
+  "fuels": [
+    {
+      "name": "Cherry Kindling",
+      "cost": 0.22
+    }
+  ],
+  "harvests": [
+    "Pear",
+    "Wheat",
+    "Green Tea Leaf",
+    "Bass",
+    "Bear Meat",
+    "Carrot",
+    "Fir Lumber"
+  ]
+}

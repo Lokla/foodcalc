@@ -1,0 +1,626 @@
+{
+    "tier": 6,
+    "recipes": [
+        {
+            "name": "Quicksand",
+            "level": 59,
+            "duration": 364,
+            "stats": "INT / STA",
+            "type": "Drink",
+            "ingredients": [
+                ["Artichoke", 2],
+                ["Darjeeling Tea Leaf", 2],
+                ["Succulent Root", 1],
+                ["Soluble Loam", 1]
+            ],
+            "fuel": 10,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Pear Glazed Sabertooth Steak",
+            "level": 59,
+            "duration": 364,
+            "stats": "STR / STA",
+            "type": "Food",
+            "ingredients": [
+                ["Prickly Pear", 1],
+                ["Sabertooth Meat", 5]
+            ],
+            "fuel": 10,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Pear Glazed Caiman Steak",
+            "level": 59,
+            "duration": 364,
+            "stats": "AGI / STA",
+            "type": "Food",
+            "ingredients": [
+                ["Prickly Pear", 1],
+                ["Caiman Meat", 5]
+            ],
+            "fuel": 10,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Desert Fever",
+            "level": 59,
+            "duration": 364,
+            "stats": "WIS / STA",
+            "type": "Drink",
+            "ingredients": [
+                ["Prickly Pear", 2],
+                ["Succulent Root", 1],
+                ["Maj'dul Coffee Bean", 2],
+                ["Soluble Loam", 1]
+            ],
+            "fuel": 10,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "The Queen",
+            "level": 58,
+            "duration": 243,
+            "stats": "INT / STA",
+            "type": "Drink",
+            "ingredients": [
+                ["Prickly Pear", 3],
+                ["Succulent Root", 1],
+                ["Soluble Loam", 1]
+            ],
+            "fuel": 8,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "The Overlord",
+            "level": 58,
+            "duration": 243,
+            "stats": "WIS / STA",
+            "type": "Drink",
+            "ingredients": [
+                ["Artichoke", 3],
+                ["Succulent Root", 1],
+                ["Soluble Loam", 1]
+            ],
+            "fuel": 8,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Prickly Pear Cookies",
+            "level": 58,
+            "duration": 243,
+            "stats": "AGI / STA",
+            "type": "Food",
+            "ingredients": [
+                ["Dough", 3],
+                ["Artichoke", 1],
+                ["Prickly Pear", 1],
+                ["Caiman Meat", 3]
+            ],
+            "fuel": 8,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Denmother's Trailmix",
+            "level": 58,
+            "duration": 243,
+            "stats": "STR / STA",
+            "type": "Food",
+            "ingredients": [
+                ["Artichoke", 2],
+                ["Prickly Pear", 1],
+                ["Caiman Meat", 2]
+            ],
+            "fuel": 8,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Unagi",
+            "level": 57,
+            "duration": 162,
+            "stats": "STR / STA",
+            "type": "Food",
+            "ingredients": [
+                ["Conger Eel", 4]
+            ],
+            "fuel": 6,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Pear Glazed Seared Tigreshrimp",
+            "level": 57,
+            "duration": 162,
+            "stats": "AGI / STA",
+            "type": "Food",
+            "ingredients": [
+                ["Prickly Pear", 1],
+                ["Tigershrimp", 3]
+            ],
+            "fuel": 6,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Mental Core Breach",
+            "level": 57,
+            "duration": 162,
+            "stats": "WIS / STA",
+            "type": "Drink",
+            "ingredients": [
+                ["Succulent Root", 1],
+                ["Maj'dul Coffee Bean", 2],
+                ["Soluble Loam", 1]
+            ],
+            "fuel": 6,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Golden Eye",
+            "level": 57,
+            "duration": 162,
+            "stats": "INT / STA",
+            "type": "Drink",
+            "ingredients": [
+                ["Conger Eel", 1],
+                ["Darjeeling Tea Leaf", 1],
+                ["Succulent Root", 1],
+                ["Soluble Loam", 1]
+            ],
+            "fuel": 6,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Sabertooth Casserole",
+            "level": 56,
+            "duration": 108,
+            "stats": "STR / STA",
+            "type": "Food",
+            "ingredients": [
+                ["Succulent Root", 1],
+                ["Sabertooth Meat", 2]
+            ],
+            "fuel": 5,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Prickly Pear Wine",
+            "level": 56,
+            "duration": 108,
+            "stats": "INT / STA",
+            "type": "Drink",
+            "ingredients": [
+                ["Prickly Pear", 2],
+                ["Succulent Root", 1]
+            ],
+            "fuel": 5,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Caiman Casserole",
+            "level": 56,
+            "duration": 108,
+            "stats": "AGI / STA",
+            "type": "Food",
+            "ingredients": [
+                ["Succulent Root", 1],
+                ["Caiman Meat", 2]
+            ],
+            "fuel": 5,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Artichoke Wine",
+            "level": 56,
+            "duration": 108,
+            "stats": "WIS / STA",
+            "type": "Drink",
+            "ingredients": [
+                ["Artichoke", 2],
+                ["Succulent Root", 1]
+            ],
+            "fuel": 5,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Pureed Artichoke Dip",
+            "level": 55,
+            "duration": 72,
+            "stats": "STR / STA",
+            "type": "Food",
+            "ingredients": [
+                ["Artichoke", 2]
+            ],
+            "fuel": 4,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Prickly Pear Muffin",
+            "level": 55,
+            "duration": 364,
+            "stats": "None",
+            "type": "Food",
+            "ingredients": [
+                ["Prickly Pear", 3],
+                ["Succulent Root", 1]
+            ],
+            "fuel": 6,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Cerebral Hemorhage",
+            "level": 55,
+            "duration": 72,
+            "stats": "INT / STA",
+            "type": "Drink",
+            "ingredients": [
+                ["Maj'dul Coffee Bean", 1],
+                ["Soluble Loam", 1]
+            ],
+            "fuel": 4,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Artery Punch",
+            "level": 55,
+            "duration": 364,
+            "stats": "None",
+            "type": "Drink",
+            "ingredients": [
+                ["Darjeeling Tea Leaf", 2],
+                ["Succulent Root", 1],
+                ["Soluble Loam", 1]
+            ],
+            "fuel": 6,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Seared Tigershrimp",
+            "level": 54,
+            "duration": 243,
+            "stats": "None",
+            "type": "Food",
+            "ingredients": [
+                ["Succulent Root", 1],
+                ["Tigershrimp", 3]
+            ],
+            "fuel": 5,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Prickly Pear Smoothie",
+            "level": 54,
+            "duration": 48,
+            "stats": "WIS / STA",
+            "type": "Drink",
+            "ingredients": [
+                ["Fluid", 1],
+                ["Prickly Pear", 2]
+            ],
+            "fuel": 2,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Eel Soup",
+            "level": 54,
+            "duration": 48,
+            "stats": "AGI / STA",
+            "type": "Food",
+            "ingredients": [
+                ["Fluid", 1],
+                ["Conger Eel", 2]
+            ],
+            "fuel": 2,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Artichoke Tea",
+            "level": 54,
+            "duration": 243,
+            "stats": "None",
+            "type": "Drink",
+            "ingredients": [
+                ["Fluid", 1],
+                ["Artichoke", 2],
+                ["Darjeeling Tea Leaf", 2]
+            ],
+            "fuel": 5,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Sabertooth Steak Sandwich",
+            "level": 53,
+            "duration": 168,
+            "stats": "None",
+            "type": "Food",
+            "ingredients": [
+                ["Dough", 1],
+                ["Prickly Pear", 1],
+                ["Succulent Root", 1],
+                ["Sabertooth Meat", 1]
+            ],
+            "fuel": 4,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Iced Majdul Coffee",
+            "level": 53,
+            "duration": 168,
+            "stats": "None",
+            "type": "Drink",
+            "ingredients": [
+                ["Fluid", 1],
+                ["Succulent Root", 1],
+                ["Maj'dul Coffee Bean", 2]
+            ],
+            "fuel": 4,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Ice Darjeeling Tea",
+            "level": 53,
+            "duration": 168,
+            "stats": "None",
+            "type": "Drink",
+            "ingredients": [
+                ["Fluid", 1],
+                ["Darjeeling Tea Leaf", 2],
+                ["Succulent Root", 1]
+            ],
+            "fuel": 4,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Caiman Steak Sandwich",
+            "level": 53,
+            "duration": 168,
+            "stats": "None",
+            "type": "Food",
+            "ingredients": [
+                ["Dough", 1],
+                ["Artichoke", 1],
+                ["Succulent Root", 1],
+                ["Caiman Meat", 1]
+            ],
+            "fuel": 4,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Prickly Pear Fizzlepop",
+            "level": 52,
+            "duration": 108,
+            "stats": "None",
+            "type": "Drink",
+            "ingredients": [
+                ["Fluid", 1],
+                ["Prickly Pear", 2],
+                ["Succulent Root", 1]
+            ],
+            "fuel": 3,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Prickly Pear Cookie",
+            "level": 52,
+            "duration": 108,
+            "stats": "None",
+            "type": "Food",
+            "ingredients": [
+                ["Dough", 1],
+                ["Prickly Pear", 2],
+                ["Succulent Root", 1]
+            ],
+            "fuel": 3,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Baked Artichocke",
+            "level": 52,
+            "duration": 108,
+            "stats": "None",
+            "type": "Food",
+            "ingredients": [
+                ["Artichoke", 2],
+                ["Succulent Root", 1]
+            ],
+            "fuel": 3,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Artichoke Fizzlepop",
+            "level": 52,
+            "duration": 108,
+            "stats": "None",
+            "type": "Drink",
+            "ingredients": [
+                ["Fluid", 1],
+                ["Artichoke", 2],
+                ["Succulent Root", 1]
+            ],
+            "fuel": 3,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Baked Eel",
+            "level": 51,
+            "duration": 72,
+            "stats": "None",
+            "type": "Food",
+            "ingredients": [
+                ["Conger Eel", 1],
+                ["Succulent Root", 1]
+            ],
+            "fuel": 1,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Baked Tigershrimp",
+            "level": 51,
+            "duration": 72,
+            "stats": "None",
+            "type": "Food",
+            "ingredients": [
+                ["Succulent Root", 1],
+                ["Tigershrimp", 1]
+            ],
+            "fuel": 1,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Darjeeling Tea",
+            "level": 51,
+            "duration": 72,
+            "stats": "None",
+            "type": "Drink",
+            "ingredients": [
+                ["Fluid", 1],
+                ["Darjeeling Tea Leaf", 2]
+            ],
+            "fuel": 1,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Majdul Coffee",
+            "level": 51,
+            "duration": 72,
+            "stats": "None",
+            "type": "Drink",
+            "ingredients": [
+                ["Fluid", 1],
+                ["Maj'dul Coffee Bean", 2]
+            ],
+            "fuel": 4,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Artichoke Kalish",
+            "level": 50,
+            "duration": 40,
+            "stats": "None",
+            "type": "Drink",
+            "ingredients": [
+                ["Fluid", 1],
+                ["Artichoke", 1]
+            ],
+            "fuel": 1,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Prickly Pear Juice",
+            "level": 50,
+            "duration": 40,
+            "stats": "None",
+            "type": "Drink",
+            "ingredients": [
+                ["Fluid", 1],
+                ["Prickly Pear", 1]
+            ],
+            "fuel": 1,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Sabertooth Steak",
+            "level": 50,
+            "duration": 40,
+            "stats": "None",
+            "type": "Food",
+            "ingredients": [
+                ["Dough", 1],
+                ["Sabertooth Meat", 1]
+            ],
+            "fuel": 1,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        },
+        {
+            "name": "Caiman Steak",
+            "level": 50,
+            "duration": 40,
+            "stats": "None",
+            "type": "Food",
+            "ingredients": [
+                ["Dough", 1],
+                ["Caiman Meat", 1]
+            ],
+            "fuel": 1,
+            "yield": 2,
+            "class": "Provisioner",
+            "fuelName": "Charcoal Kindling"
+        }
+    ]
+}
