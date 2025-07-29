@@ -23,6 +23,11 @@ export class RecipesComponent {
   
   constructor(private dataService: DataService) {}
   
+  // Check if recipes are loaded
+  get isLoading() {
+    return !this.dataService.getRecipesLoaded();
+  }
+  
   // Computed property for filtered and sorted recipes
   filteredRecipes = computed(() => {
     // Always get recipes for the current tier

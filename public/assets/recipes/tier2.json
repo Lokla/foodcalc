@@ -1,0 +1,18 @@
+{
+  "tier": 2,
+  "fuels": [
+    {
+      "name": "Mulberry Kindling",
+      "cost": 0.05
+    }
+  ],
+  "harvests": [
+    "Apple",
+    "Barley",
+    "Black Tea Leaf",
+    "Crab Meat",
+    "Wolf Meat",
+    "Tuber",
+    "Elm Lumber"
+  ]
+}

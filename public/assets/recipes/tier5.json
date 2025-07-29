@@ -1,0 +1,18 @@
+{
+  "tier": 5,
+  "fuels": [
+    {
+      "name": "Mesquite Kindling",
+      "cost": 3.31
+    }
+  ],
+  "harvests": [
+    "Orange",
+    "Rye",
+    "Jasmine Tea Leaf",
+    "Halibut",
+    "Griffon Meat",
+    "Leek",
+    "Briarwood Lumber"
+  ]
+}

@@ -1,8 +1,13 @@
 <div class="recipes-list-container">
   <h2>Recipes Table - Tier {{ getCurrentTier() }}</h2>
   
-  <!-- Filters Section -->
-  <div class="filters-section">
+  @if (isLoading) {
+    <div class="loading-state">
+      <p>Loading tier recipes...</p>
+    </div>
+  } @else {
+    <!-- Filters Section -->
+    <div class="filters-section">
     <h3>Filters</h3>
     <div class="filter-row">
       <div class="filter-group">
@@ -112,4 +117,5 @@
   <div class="table-info">
     <p><strong>Stack:</strong> 20 items | <strong>Showing:</strong> {{ sortedRecipes().length }} recipes</p>
   </div>
+  } <!-- End of @else block -->
 </div>

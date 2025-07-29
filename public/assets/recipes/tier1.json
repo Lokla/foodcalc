@@ -1,0 +1,18 @@
+{
+  "tier": 1,
+  "fuels": [
+    {
+      "name": "Walnut Kindling",
+      "cost": 0.02
+    }
+  ],
+  "harvests": [
+    "Frog Leg",
+    "Jumjum",
+    "Black Coffee Bean",
+    "Sunfish",
+    "Deer Meat",
+    "Baubbleshire Cabbage",
+    "Raw White Tea Leaf"
+  ]
+}

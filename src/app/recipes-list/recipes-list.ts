@@ -23,6 +23,11 @@ export class RecipesListComponent {
   
   constructor(private dataService: DataService) {}
   
+  // Check if recipes are loaded
+  get isLoading() {
+    return !this.dataService.getRecipesLoaded();
+  }
+  
   // Get available stats for filter dropdown
   availableStats = computed(() => {
     const allRecipes = this.dataService.getRecipesForCurrentTier();

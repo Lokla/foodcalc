@@ -4,11 +4,16 @@
     <p>Set current broker prices for the highest-level recipes of each stat/type combination in this tier.</p>
   </div>
 
-  <div class="references-summary">
-    <div class="summary-info">
-      <strong>Total Reference Items:</strong> {{ referenceItems().length }}
+  @if (isLoading) {
+    <div class="loading-state">
+      <p>Loading tier recipes...</p>
     </div>
-  </div>
+  } @else {
+    <div class="references-summary">
+      <div class="summary-info">
+        <strong>Total Reference Items:</strong> {{ referenceItems().length }}
+      </div>
+    </div>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()" class="references-form">
     <div class="references-grid">
@@ -71,4 +76,5 @@
       </div>
     }
   </form>
+  } <!-- End of @else block -->
 </div>

@@ -7,9 +7,14 @@
     </div>
   }
   
-  <!-- Filters Section -->
-  <div class="filters-section">
-    <h3>Showing Recipes for Current Tier: {{ getCurrentTier() }}</h3>
+  @if (isLoading) {
+    <div class="loading-state">
+      <p>Loading tier recipes...</p>
+    </div>
+  } @else {
+    <!-- Filters Section -->
+    <div class="filters-section">
+      <h3>Showing Recipes for Current Tier: {{ getCurrentTier() }}</h3>
     
     <div class="filter-row">
       <div class="filter-group">
@@ -159,4 +164,5 @@
       </div>
     }
   </div>
+  } <!-- End of @else block -->
 </div>

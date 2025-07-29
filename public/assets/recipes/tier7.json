@@ -1,0 +1,25 @@
+﻿{
+    "tier": 7,
+    "fuels": [
+        {
+            "name": "Rosewood Kindling",
+            "cost": 18.65
+        },
+        {
+            "name": "Rosewood Coal",
+            "cost": 22.50
+        }
+    ],
+    "harvests":  [
+                     "Squash",
+                     "Xegonberry",
+                     "Sweet Chai Tea Leaf",
+                     "Soaring Coffee Bean",
+                     "Ravasect Meat",
+                     "Aviak Meat",
+                     "Flying Fish",
+                     "Azurite",
+                     "Hanging Root",
+                     "Rosewood Lumber"
+                 ]
+}

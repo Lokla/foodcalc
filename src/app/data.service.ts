@@ -11,10 +11,22 @@ export interface Recipe {
     ingredients: [string, number][];
     fuel: number;
     yield?: number; // Number of products produced (defaults to 2 if not specified)
+    class?: string; // Crafting class (e.g., "Provisioner")
+    fuelName?: string; // Name of the fuel used
+}
+
+export interface TierRecipes {
+    tier: number;
+    recipes: Recipe[];
+}
+
+export interface TierMetadata {
+    tier: number;
+    fuels: FuelCost[];
+    harvests: string[];
 }
 
 export interface FuelCost {
-  tier: number;
   name: string;
   cost: number;
 }
@@ -167,23 +179,12 @@ export class DataService {
     { name: 'Dough', cost: 0.27 }
   ]);
 
-  // Fuel costs by tier
-  private fuelCosts = signal<FuelCost[]>([
-    { tier: 1, name: 'Walnut Kindling', cost: 0.02 },
-    { tier: 2, name: 'Mulberry Kindling', cost: 0.05 },
-    { tier: 3, name: 'Cherry Kindling', cost: 0.22 },
-    { tier: 4, name: 'Hickory Kindling', cost: 0.83 },
-    { tier: 5, name: 'Mesquite Kindling', cost: 3.31 },
-    { tier: 6, name: 'Charcoal Kindling', cost: 13.25 },
-    { tier: 7, name: 'Rosewood Kindling', cost: 18.65 }
-  ]);
+  // Mapping of tier to fuel costs
+  private tierFuelMapping = signal<Map<number, FuelCost[]>>(new Map());
 
   // Recipe data - loaded dynamically from JSON files
   private allRecipes = signal<Recipe[]>([]);
   private recipesLoaded = signal<boolean>(false);
-
-  // Recipe files list - loaded dynamically from manifest
-  private recipeFiles: string[] = [];
 
   // Selected tier
   private selectedTier = signal<string>('7');
@@ -191,68 +192,90 @@ export class DataService {
   constructor(private http: HttpClient) {
     // Load saved data from localStorage first
     this.loadFromLocalStorage();
-    // Then load recipes
-    this.loadRecipes();
+    // Load initial tier data based on selected tier
+    this.loadTierData(parseInt(this.selectedTier()));
   }
 
-  // Load recipes dynamically from JSON files
-  private async loadRecipes() {
+  // Load recipes and metadata for a specific tier
+  private async loadTierData(tier: number) {
     this.recipesLoaded.set(false);
     try {
-      // First, load the recipe manifest to get the list of available recipe files
-      const manifest = await firstValueFrom(
-        this.http.get<{recipes: string[]}>('assets/recipes/recipes.json')
-      );
-      this.recipeFiles = manifest.recipes;
-      
       const recipes: Recipe[] = [];
+      const tierFuelMap = new Map<number, FuelCost[]>();
       
-      for (const filename of this.recipeFiles) {
-        try {
-          const recipe = await firstValueFrom(
-            this.http.get<Recipe>(`assets/recipes/${encodeURIComponent(filename)}`)
-          );
-          recipes.push(recipe);
-        } catch (error) {
-          console.warn(`Failed to load recipe file: ${filename}`, error);
-        }
+      console.log(`Loading data for tier ${tier}...`);
+      
+      // Load tier metadata (fuels and harvests)
+      try {
+        const tierMetadata = await firstValueFrom(
+          this.http.get<TierMetadata>(`assets/recipes/tier${tier}.json`)
+        );
+        
+        // Store tier-fuel mapping for this tier
+        tierFuelMap.set(tier, tierMetadata.fuels);
+        
+        console.log(`Loaded ${tierMetadata.fuels.length} fuels from tier${tier}.json`);
+      } catch (error) {
+        console.warn(`Failed to load tier${tier}.json metadata:`, error);
       }
       
-      // Update the recipes signal with loaded data
+      // Load provisioner recipes for this tier
+      try {
+        const tierRecipes = await firstValueFrom(
+          this.http.get<TierRecipes>(`assets/recipes/provisioner/tier${tier}.json`)
+        );
+        
+        // Add recipes from this tier to the recipes array
+        recipes.push(...tierRecipes.recipes);
+        
+        console.log(`Loaded ${tierRecipes.recipes.length} recipes from provisioner tier${tier}.json`);
+      } catch (error) {
+        console.warn(`Failed to load provisioner tier${tier}.json:`, error);
+      }
+      
+      // Update the signals with loaded data
       this.allRecipes.set(recipes);
+      this.tierFuelMapping.set(tierFuelMap);
       this.recipesLoaded.set(true);
-      console.log(`Loaded ${recipes.length} recipes from ${this.recipeFiles.length} JSON files`);
+      console.log(`Tier ${tier} loaded: ${recipes.length} recipes and ${tierFuelMap.get(tier)?.length || 0} fuel types`);
     } catch (error) {
-      console.error('Failed to load recipes:', error);
-      // Fallback to empty array if loading fails
+      console.error(`Failed to load tier ${tier} data:`, error);
+      // Fallback to empty arrays if loading fails
       this.allRecipes.set([]);
+      this.tierFuelMapping.set(new Map());
       this.recipesLoaded.set(false);
     }
   }
 
-  // Add a new recipe file to the list and reload
-  addRecipeFile(filename: string) {
-    if (!this.recipeFiles.includes(filename)) {
-      this.recipeFiles.push(filename);
-      // Note: This will add to the current session only
-      // To persist, you'd need to update the recipes.json manifest file
-      this.loadRecipes(); // Reload all recipes
+  // Private property to track available tiers
+  private availableTiers: number[] = [6, 7]; // Tier 6 and 7 are available
+
+  // Add a new tier to the list and reload current tier
+  addTier(tierNumber: number) {
+    if (!this.availableTiers.includes(tierNumber)) {
+      this.availableTiers.push(tierNumber);
+      // If this is the currently selected tier, reload its data
+      const currentTier = parseInt(this.selectedTier());
+      if (tierNumber === currentTier) {
+        this.loadTierData(tierNumber);
+      }
     }
   }
 
-  // Reload recipes from files (useful for refreshing data)
+  // Reload data for the currently selected tier
   reloadRecipes() {
-    this.loadRecipes();
+    const currentTier = parseInt(this.selectedTier());
+    this.loadTierData(currentTier);
   }
 
-  // Get the list of recipe files being loaded
-  getRecipeFiles() {
-    return [...this.recipeFiles];
+  // Get the list of available tiers
+  getAvailableTiers() {
+    return [...this.availableTiers];
   }
 
-  // Get the number of available recipe files
-  getRecipeFileCount() {
-    return this.recipeFiles.length;
+  // Get the number of available tiers
+  getAvailableTierCount() {
+    return this.availableTiers.length;
   }
 
   // Get raw materials for the currently selected tier
@@ -361,6 +384,8 @@ export class DataService {
 
   setSelectedTier(tier: string) {
     this.selectedTier.set(tier);
+    // Load data for the new tier
+    this.loadTierData(parseInt(tier));
     // Auto-save to localStorage after updating tier selection
     this.saveToLocalStorage();
   }
@@ -399,9 +424,11 @@ export class DataService {
 
   // Get recipes for a specific tier
   getRecipesByTier(tier: number) {
-    return this.allRecipes().filter(recipe => 
+    const allRecipes = this.allRecipes();
+    const filteredRecipes = allRecipes.filter(recipe => 
       this.getTierFromLevel(recipe.level) === tier
     );
+    return filteredRecipes;
   }
 
   // Get recipes for the currently selected tier
@@ -412,8 +439,13 @@ export class DataService {
 
   // Get fuel cost for a specific tier
   getFuelCostForTier(tier: number): number {
-    const fuelInfo = this.fuelCosts().find(fuel => fuel.tier === tier);
-    return fuelInfo ? fuelInfo.cost : 0;
+    const tierFuels = this.tierFuelMapping().get(tier);
+    if (tierFuels && tierFuels.length > 0) {
+      // Return the cost of the first fuel for this tier
+      // In the future, this could be enhanced to select specific fuels based on crafter type
+      return tierFuels[0].cost;
+    }
+    return 0;
   }
 
   // Get default ingredient cost

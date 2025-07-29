@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, signal, computed, effect } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { DataService } from '../data.service';
 import { CommonModule } from '@angular/common';
@@ -20,22 +20,25 @@ export interface ReferenceItem {
   templateUrl: './references.html',
   styleUrl: './references.css'
 })
-export class ReferencesComponent implements OnInit {
+export class ReferencesComponent {
   private dataService = inject(DataService);
   private fb = inject(FormBuilder);
 
   form!: FormGroup;
-  referenceItems = signal<ReferenceItem[]>([]);
   selectedTier = this.dataService.getSelectedTier();
   copiedItem = signal<string | null>(null);
 
-  ngOnInit() {
-    this.generateReferenceItems();
-    this.buildForm();
-    this.loadFromLocalStorage();
+  // Check if recipes are loaded
+  get isLoading() {
+    return !this.dataService.getRecipesLoaded();
   }
 
-  private generateReferenceItems() {
+  // Computed property for reference items that updates when recipes are loaded
+  referenceItems = computed(() => {
+    if (!this.dataService.getRecipesLoaded()) {
+      return [];
+    }
+
     const currentTier = parseInt(this.selectedTier());
     const recipes = this.dataService.getAllRecipes()();
     
@@ -83,7 +86,18 @@ export class ReferencesComponent implements OnInit {
       return a.type.localeCompare(b.type);
     });
 
-    this.referenceItems.set(references);
+    return references;
+  });
+
+  constructor() {
+    // Effect to build form when reference items change
+    effect(() => {
+      const items = this.referenceItems();
+      if (items.length > 0) {
+        this.buildForm();
+        this.loadFromLocalStorage();
+      }
+    });
   }
 
   private buildForm() {

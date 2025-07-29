@@ -1,0 +1,37 @@
+{
+  "tier": 6,
+  "fuelName": "Teak Kindling",
+  "harvests": [
+    "Artichoke",
+    "Caiman Meat",
+    "Prickly Pear", 
+    "Sabertooth Meat",
+    "Frog Meat",
+    "Cinnamon Bark",
+    "Feyiron",
+    "Tiger Prawn",
+    "Gnoll Meat",
+    "Teak Lumber"
+  ],
+  "recipes": [
+    {
+      "name": "Example Tier 6 Recipe",
+      "level": 50,
+      "duration": 15,
+      "stats": {
+        "Health": 100,
+        "Power": 60,
+        "Duration": 30
+      },
+      "type": "Food",
+      "ingredients": [
+        ["Artichoke", 2],
+        ["Caiman Meat", 1]
+      ],
+      "fuel": 15,
+      "yield": 2,
+      "class": "Provisioner",
+      "fuelName": "Teak Kindling"
+    }
+  ]
+}

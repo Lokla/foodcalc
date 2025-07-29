@@ -1,0 +1,909 @@
+﻿{
+    "recipes":  [
+                    {
+                        "name":  "Aviak Sandwich",
+                        "level":  60,
+                        "duration":  48,
+                        "stats":  "None",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Dough",
+                                                1
+                                            ],
+                                            [
+                                                "Aviak Meat",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  1,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Ravasect Sandwich",
+                        "level":  60,
+                        "duration":  48,
+                        "stats":  "None",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Dough",
+                                                1
+                                            ],
+                                            [
+                                                "Ravasect Meat",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  1,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Squash Beer",
+                        "level":  60,
+                        "duration":  48,
+                        "stats":  "None",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Squash",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  1,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Squash Cider",
+                        "level":  60,
+                        "duration":  48,
+                        "stats":  "None",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Squash",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  1,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Aviak Steak",
+                        "level":  61,
+                        "duration":  72,
+                        "stats":  "None",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Aviak Meat",
+                                                1
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  3,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Ravasect Steak",
+                        "level":  61,
+                        "duration":  72,
+                        "stats":  "None",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Ravasect Meat",
+                                                1
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  3,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Xegonberry Juice",
+                        "level":  61,
+                        "duration":  72,
+                        "stats":  "None",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                2
+                                            ]
+                                        ],
+                        "fuel":  3,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Xegonberry Sparkling Juice",
+                        "level":  61,
+                        "duration":  72,
+                        "stats":  "None",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                2
+                                            ]
+                                        ],
+                        "fuel":  3,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Soaring Cappucino",
+                        "level":  62,
+                        "duration":  108,
+                        "stats":  "None",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Soaring Coffee Bean",
+                                                3
+                                            ]
+                                        ],
+                        "fuel":  3,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Soaring Espresso",
+                        "level":  62,
+                        "duration":  108,
+                        "stats":  "None",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Soaring Coffee Bean",
+                                                3
+                                            ]
+                                        ],
+                        "fuel":  3,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Xegonberry Cookie",
+                        "level":  62,
+                        "duration":  108,
+                        "stats":  "None",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                1
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                1
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  3,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Xegonberry Pie",
+                        "level":  62,
+                        "duration":  108,
+                        "stats":  "None",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                1
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                1
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  3,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Baked Squash",
+                        "level":  63,
+                        "duration":  162,
+                        "stats":  "None",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                2
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  4,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Sparkling Sweet Iced Chai Tea",
+                        "level":  63,
+                        "duration":  162,
+                        "stats":  "None",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Sweet Chai Tea Leaf",
+                                                3
+                                            ]
+                                        ],
+                        "fuel":  4,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Squash Casserole",
+                        "level":  63,
+                        "duration":  162,
+                        "stats":  "None",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                3
+                                            ]
+                                        ],
+                        "fuel":  4,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Sweet Chai Tea",
+                        "level":  63,
+                        "duration":  162,
+                        "stats":  "None",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Sweet Chai Tea Leaf",
+                                                3
+                                            ]
+                                        ],
+                        "fuel":  4,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Baked Flying Fish",
+                        "level":  64,
+                        "duration":  243,
+                        "stats":  "None",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                1
+                                            ],
+                                            [
+                                                "Flying Fish",
+                                                2
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  5,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Seasoned Aviak Sandwich",
+                        "level":  64,
+                        "duration":  48,
+                        "stats":  "AGI / STA",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Aviak Meat",
+                                                1
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  2,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Soaring Espresso Machiato",
+                        "level":  64,
+                        "duration":  243,
+                        "stats":  "None",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Soaring Coffee Bean",
+                                                4
+                                            ]
+                                        ],
+                        "fuel":  5,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Xegonberry Wine",
+                        "level":  64,
+                        "duration":  48,
+                        "stats":  "WIS / STA",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                2
+                                            ]
+                                        ],
+                        "fuel":  2,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Grilled Flying Fish",
+                        "level":  65,
+                        "duration":  364,
+                        "stats":  "None",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Xegonberry",
+                                                1
+                                            ],
+                                            [
+                                                "Flying Fish",
+                                                2
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  6,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Seasoned Ravasect Sandwich",
+                        "level":  65,
+                        "duration":  72,
+                        "stats":  "STR / STA",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Ravasect Meat",
+                                                1
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  4,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Soaring Espresso Latte",
+                        "level":  65,
+                        "duration":  364,
+                        "stats":  "None",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Soaring Coffee Bean",
+                                                4
+                                            ]
+                                        ],
+                        "fuel":  6,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Xegonberry Brandy",
+                        "level":  65,
+                        "duration":  72,
+                        "stats":  "INT / STA",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                2
+                                            ]
+                                        ],
+                        "fuel":  4,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Black-Eye Chai",
+                        "level":  66,
+                        "duration":  108,
+                        "stats":  "WIS / STA",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                2
+                                            ],
+                                            [
+                                                "Sweet Chai Tea Leaf",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  5,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Iced Black Eye Chai",
+                        "level":  66,
+                        "duration":  108,
+                        "stats":  "INT / STA",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                2
+                                            ],
+                                            [
+                                                "Sweet Chai Tea Leaf",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  5,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Xegonberry Cobbler",
+                        "level":  66,
+                        "duration":  108,
+                        "stats":  "AGI / STA",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Xegonberry",
+                                                2
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  5,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Xegonberry Sorbet",
+                        "level":  66,
+                        "duration":  108,
+                        "stats":  "STR / STA",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Xegonberry",
+                                                2
+                                            ],
+                                            [
+                                                "Aviak Meat",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  5,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Narcoleptic Sweet-Talk",
+                        "level":  67,
+                        "duration":  162,
+                        "stats":  "INT / STA",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                2
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                1
+                                            ],
+                                            [
+                                                "Sweet Chai Tea Leaf",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  6,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Rosewood Sling",
+                        "level":  67,
+                        "duration":  162,
+                        "stats":  "WIS / STA",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Fluid",
+                                                1
+                                            ],
+                                            [
+                                                "Squash",
+                                                1
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                1
+                                            ],
+                                            [
+                                                "Rosewood Lumber",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  6,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Squash Cobbler",
+                        "level":  67,
+                        "duration":  162,
+                        "stats":  "AGI / STA",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                2
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                1
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  6,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Squash Pie",
+                        "level":  67,
+                        "duration":  162,
+                        "stats":  "STR / STA",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                2
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                1
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  6,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Dancing Halfling",
+                        "level":  68,
+                        "duration":  243,
+                        "stats":  "INT / STA",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                3
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                2
+                                            ]
+                                        ],
+                        "fuel":  8,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Flying Fish Stew",
+                        "level":  68,
+                        "duration":  243,
+                        "stats":  "STR / STA",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                1
+                                            ],
+                                            [
+                                                "Flying Fish",
+                                                3
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  8,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Flying Freddy",
+                        "level":  68,
+                        "duration":  243,
+                        "stats":  "WIS / STA",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                1
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                2
+                                            ],
+                                            [
+                                                "Flying Fish",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  8,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Seasoned Flying Fish Rolls",
+                        "level":  68,
+                        "duration":  243,
+                        "stats":  "AGI / STA",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                2
+                                            ],
+                                            [
+                                                "Flying Fish",
+                                                2
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  8,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Bosprite Squash Muffin",
+                        "level":  69,
+                        "duration":  364,
+                        "stats":  "STR / STA",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                3
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                2
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                1
+                                            ]
+                                        ],
+                        "fuel":  10,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Bosprite Wine",
+                        "level":  69,
+                        "duration":  364,
+                        "stats":  "INT / STA",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                2
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                4
+                                            ]
+                                        ],
+                        "fuel":  10,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Gigglegibbery Juice",
+                        "level":  69,
+                        "duration":  364,
+                        "stats":  "WIS / STA",
+                        "type":  "Drink",
+                        "ingredients":  [
+                                            [
+                                                "Squash",
+                                                3
+                                            ],
+                                            [
+                                                "Xegonberry",
+                                                3
+                                            ]
+                                        ],
+                        "fuel":  10,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    },
+                    {
+                        "name":  "Screewoggin\u0027s Surprise",
+                        "level":  69,
+                        "duration":  364,
+                        "stats":  "AGI / STA",
+                        "type":  "Food",
+                        "ingredients":  [
+                                            [
+                                                "Ravasect Meat",
+                                                1
+                                            ],
+                                            [
+                                                "Flying Fish",
+                                                2
+                                            ],
+                                            [
+                                                "Aviak Meat",
+                                                1
+                                            ],
+                                            [
+                                                "Hanging Root",
+                                                2
+                                            ]
+                                        ],
+                        "fuel":  10,
+                        "yield":  2,
+                        "class":  "Provisioner",
+                        "fuelName":  "Rosewood Kindling"
+                    }
+                ],
+    "tier":  7
+}

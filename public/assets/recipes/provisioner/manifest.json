@@ -1,0 +1,13 @@
+{
+    "class": "Provisioner",
+    "description": "Food and drink recipes for the Provisioner crafting class",
+    "tierFiles": [
+        "tier1.json",
+        "tier2.json", 
+        "tier3.json",
+        "tier4.json",
+        "tier5.json",
+        "tier6.json",
+        "tier7.json"
+    ]
+}

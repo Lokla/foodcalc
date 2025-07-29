@@ -1,0 +1,53 @@
+{
+  "tier": 7,
+  "fuelName": "Rosewood Kindling", 
+  "harvests": [
+    "Quill of the Harpy",
+    "Wisp Essence",
+    "Sphinx Claw",
+    "Qeynos Lily Root",
+    "Nightshade",
+    "Ginko Bark",
+    "Rosewood Lumber"
+  ],
+  "recipes": [
+    {
+      "name": "Greater Health Potion",
+      "level": 60,
+      "duration": 20,
+      "stats": {
+        "Health": 150,
+        "Duration": 60
+      },
+      "type": "Potion",
+      "ingredients": [
+        ["Qeynos Lily Root", 2],
+        ["Wisp Essence", 1],
+        ["Nightshade", 1]
+      ],
+      "fuel": 20,
+      "yield": 3,
+      "class": "Sage",
+      "fuelName": "Rosewood Kindling"
+    },
+    {
+      "name": "Superior Mana Elixir", 
+      "level": 65,
+      "duration": 25,
+      "stats": {
+        "Power": 200,
+        "Duration": 60
+      },
+      "type": "Elixir",
+      "ingredients": [
+        ["Sphinx Claw", 2],
+        ["Ginko Bark", 2],
+        ["Wisp Essence", 1]
+      ],
+      "fuel": 25,
+      "yield": 3,
+      "class": "Sage",
+      "fuelName": "Rosewood Kindling"
+    }
+  ]
+}

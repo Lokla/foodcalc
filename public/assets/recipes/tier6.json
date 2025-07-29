@@ -1,0 +1,21 @@
+{
+  "tier": 6,
+  "fuels": [
+    {
+      "name": "Charcoal Kindling",
+      "cost": 13.25
+    }
+  ],
+  "harvests": [
+    "Artichoke",
+    "Caiman Meat",
+    "Prickly Pear", 
+    "Sabertooth Meat",
+    "Frog Meat",
+    "Cinnamon Bark",
+    "Feyiron",
+    "Tiger Prawn",
+    "Gnoll Meat",
+    "Teak Lumber"
+  ]
+}
